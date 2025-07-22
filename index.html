@@ -8,29 +8,94 @@
 </head>
 
 <body>
-    <div>
+    <header>
+
         <p>a</p>
         <!-- 这是p标签 -->
-        <h1>Hello World!这是一级标题</h1>
-        <h6>Hello World!这是六级标题</h6>
+        <h2> Love</h2>
+        <h6> Peace</h6>
         <span>111</span>
         <br />
         <span>222</span>
-    </div>
-    <div>
-        <img src="image\2024-11-15 213255.png" width="500px" height="50px">
-        <p>发的华盛顿海军死哦热狗v分别是的基础上京东超市的未必是然后覅v步伐加快查询没<br />ygcsvdhcbzjkKFHsguvf hcx</p>
-        <a href="http://www.baidu.com" target="_blank">跳转百度</a>
+
+    </header>
+    <main>
+        <p>love<br />is dange</p>
+        <nav>
+            <a href="http://www.baidu.com" target="_blank">跳转百度</a>
+        </nav>
+        <article>
+            <h3>这是一个特大新闻</h3>
+            点击图片
+            <a href="news.html" target="_parent">
+                <img src="image\2024-11-15 213255.png" width="50" alt="爆炸新闻" title="点开看看">
+            </a>
+        </article>
+        <h2>三种列表的使用</h2>
+        <section>
+            <h3>这是&lt;ul&gt;标签</h3>
+            <ul>
+                <li>橘子</li>
+                <li>牛奶</li>
+            </ul>
+        </section>
+        <h3>这是&lt;ol&gt;标签的三种使用</h3>
+        <section>
+            <ol>
+                <li>草莓</li>
+                <li>牛奶</li>
+            </ol>
+            <ol type="a" start="7">
+                <li>草莓</li>
+                <li>牛奶</li>
+            </ol>
+            <ol type="a" reversed>
+                <li>草莓</li>
+                <li>牛奶</li>
+            </ol>
+        </section>
+        <section>
+            <h3>这是&lt;dd,di,dt&gt;标签的使用</h3>
+            <dl>
+                <dt>html </dt>
+                <dd>超文本标记语言</dd>
+            </dl>
+        </section>
+
+    </main>
+    <footer>
+        <h2 id="欢迎回来">用户信息反馈 </h2>
         <form action="" method="post">
-            <input type="color">
-            <input type="text" placeholder="正确填写 谢谢...">
-            <input type="text" value="qq" disabled placeholder="正确填写 谢谢...">
-            <input type="radio" name="t" value="girl"> 女
-            <input type="radio" name="t" value="boy"> 男
-
+            <label>
+                <p>姓名</p>
+                <input type="text" required>
+                <p>常用软件</p>
+                <input type="text" value="vx">
+                <input type="textarea" width="2" value="汉" disabled>
+                <input type="radio" name="t" value="girl"> 女
+                <input type="radio" name="t" value="boy"> 男
+                <p>喜欢的颜色</p><input type="color">
+                <p>email</p>
+                <input type="email" placeholder="正确填写 谢谢...">
+                <p>出生于</p>
+                <input type="text" list="suggestions">
+                <datalist id="suggestions">
+                    <option value="河北">
+                    <option value="河南">
+                    <option value="河里">
+                </datalist>
+                <p>年龄</p>
+                <input type="range" min="18" max="30">
+                <input type="number" min="18" max="30">
+                <p>喜欢的钱</p>
+                <input type="checkbox" value="50">50
+                <input type="checkbox" value="100">100
+                <input type="checkbox" value="1">1
+                <input type="checkbox" value="20">20
+            </label>
+            <input type="submit">
         </form>
-
-    </div>
+    </footer>
 </body>
 
 </html>
