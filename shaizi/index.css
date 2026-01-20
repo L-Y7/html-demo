@@ -1,0 +1,31 @@
+.mian {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.dian {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: brown;
+  position: absolute;
+}
+
+.p1 .dian {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p2 .dian:nth-child(1) {
+  top: 20px;
+  left: 20px;
+}
+
+.p2 .dian:nth-child(2) {
+  bottom: 20px;
+  right: 20px;
+}
