@@ -22,10 +22,92 @@
 
 .p2 .dian:nth-child(1) {
   top: 20px;
-  left: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .p2 .dian:nth-child(2) {
   bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.p3 .dian:nth-child(3) {
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.p3 .dian:nth-child(1) {
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p3 .dian:nth-child(2) {
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.p4 .dian:nth-child(1) {
+  left: 20px;
+  top: 20px;
+}
+.p4 .dian:nth-child(2) {
   right: 20px;
+  top: 20px;
+}
+.p4 .dian:nth-child(3) {
+  bottom: 20px;
+  left: 20px;
+}
+
+.p4 .dian:nth-child(4) {
+  right: 20px;
+  bottom: 20px;
+}
+.p5 .dian:nth-child(1) {
+  left: 20px;
+  top: 20px;
+}
+.p5 .dian:nth-child(2) {
+  right: 20px;
+  top: 20px;
+}
+.p5 .dian:nth-child(3) {
+  bottom: 20px;
+  left: 20px;
+}
+
+.p5 .dian:nth-child(4) {
+  right: 20px;
+  bottom: 20px;
+}
+.p5 .dian:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.p6 .dian:nth-child(6) {
+  left: 20px;
+  top: 45px;
+}
+.p6 .dian:nth-child(1) {
+  left: 20px;
+  top: 20px;
+}
+.p6 .dian:nth-child(2) {
+  right: 20px;
+  top: 20px;
+}
+.p6 .dian:nth-child(3) {
+  bottom: 20px;
+  left: 20px;
+}
+
+.p6 .dian:nth-child(4) {
+  right: 20px;
+  bottom: 20px;
+}
+.p6 .dian:nth-child(5) {
+  right: 20px;
+  top: 45px;
 }
