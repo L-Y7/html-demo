@@ -9,21 +9,33 @@
 </head>
 <script>
     function setClass() {
-        var colorDom = document.getElementById("color")
-        colorDom.classList.toggle("red");
+        var colorDom = document.getElementsByClassName("color")
+        for (var a = 0; a < colorDom.length; a++) {
+            colorDom[a].classList.toggle("red");
+        }
+        console.log(colorDom)
     }
 
     window.onload = function () {
         var b = document.getElementById("btn");
         b.addEventListener("click", setClass);
-
+        console.log(b)
     }
 </script>
 
 <body>
     <button id="btn">Magic</button>
-    <div id="color"></div>
-
+    <div class="box">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+    </div>
 
 </body>
 
