@@ -1,0 +1,249 @@
+.entry {
+  height: 500px;
+  background-color: #f5f5f5;
+}
+.entry .w {
+  height: 100%;
+  position: relative;
+}
+
+.fenlei {
+  position: absolute;
+  width: 250px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+.fenlei ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 12px 0 29px;
+  color: #fff;
+}
+.fenlei ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+.fenlei ul li a:first-child {
+  font-size: 16px;
+  margin-right: 16px;
+}
+.fenlei ul li:hover {
+  background-color: aqua;
+}
+
+.banner {
+  position: relative;
+}
+.yuan {
+  position: absolute;
+  bottom: 20px;
+  right: 12px;
+}
+.banner ul {
+  display: flex;
+}
+
+.banner .zuoj,
+.banner .youj {
+  height: 40px;
+  width: 40px;
+  background-color: #685e5e;
+  top: 50%;
+  position: absolute;
+  margin-top: -20px;
+}
+.zuoj {
+  right: 0;
+  text-align: center;
+}
+.youj {
+  left: 250px;
+  text-align: center;
+}
+.zuoj i,
+.youj i {
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 35px;
+}
+.yuan li {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #666666;
+  margin-right: 4px;
+}
+.yuan li:hover {
+  box-shadow: 0 0 0 3px;
+  background-color: #fff;
+}
+.search {
+  position: relative;
+}
+.search i {
+  position: absolute;
+  color: #ccc;
+  top: 11px;
+}
+.car {
+  position: relative;
+}
+.car span {
+  position: absolute;
+  color: #fff;
+  background-color: orange;
+  left: 27px;
+  top: 2px;
+  border-radius: 10px;
+}
+.w .box1 {
+  height: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box1 h2 {
+  font-size: 30px;
+}
+.box1 h2 small {
+  font-size: 16px;
+  color: #a1a1a1;
+  margin-left: 30px;
+}
+.box1 a {
+  color: #a1a1a1;
+}
+.box2 ul {
+  display: flex;
+  justify-content: space-between;
+}
+.box2 ul li {
+  width: 304px;
+  height: 404px;
+  text-align: center;
+  background-color: #eef9f4;
+}
+.box2 ul li a {
+  display: block;
+  height: 100%;
+}
+.box2 ul li img {
+  width: 304px;
+  height: 304px;
+}
+.box2 ul li .title {
+  margin: 18px 0 15px;
+  font-size: 20px;
+  padding: 0 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box2 ul li .price {
+  font-size: 20px;
+  color: #aa2113;
+}
+.box2 ul li .price {
+  font-size: 18px;
+}
+.hot {
+  margin-bottom: 60px;
+}
+.hot .box2 ul li {
+  background-color: #fff;
+}
+.shang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 102px;
+  padding-top: 10px;
+}
+.shang .syou {
+  display: flex;
+}
+.shang .syou more {
+  font-size: 16px;
+  color: #a1a1a1;
+  margin-left: 60px;
+}
+.shang .syou ul {
+  display: flex;
+  gap: 10px;
+}
+.shang .syou ul li a:hover {
+  color: #fff;
+  background-color: #00be9a;
+}
+.shang .syou ul li a {
+  padding: 5px 3px;
+  border-radius: 2 px;
+}
+.xia {
+  display: flex;
+  justify-content: space-between;
+}
+.xia .xzuo {
+  width: 248px;
+  height: 610px;
+}
+.xia .xyou {
+  display: flex;
+  flex-wrap: wrap;
+  width: 968px;
+  height: 610px;
+}
+.xia .xyou li {
+  width: 242px;
+  height: 305px;
+  padding: 10px 21px 0;
+}
+.xia .xyou li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 19px;
+}
+.xia .xyou li img {
+  width: 200px;
+  height: 180px;
+}
+.xia .xyou li .title {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.xia .xyou li .price {
+  font-size: 22px;
+  color: #af2f22;
+  margin-top: 12px;
+}
+.news {
+  margin-bottom: 60px;
+}
+.news ul {
+  display: flex;
+  gap: 12px;
+}
+.news li {
+  flex: 1;
+  height: 355px;
+}
+.news li img {
+  width: 100%;
+}
+.news .dianzan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 67px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #666666;
+}
+.news .dianzan .like {
+  margin-right: 20px;
+}
