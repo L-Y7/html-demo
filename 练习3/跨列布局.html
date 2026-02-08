@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            max-width: 1200px;
+            height: 900px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-auto-flow: column;
+            gap:20px;
+        }
+
+
+
+        .box .items:first-child {
+            grid-row: 1/3;
+            grid-column: 2/4;
+        }
+
+        .items img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="items">
+            <img src="../练习/img/c2-1.webp">
+        </div>
+        <div class="items">
+            <img src="../练习/img/c2-2.webp">
+        </div>
+        <div class="items">
+            <img src="../练习/img/c2-3.webp">
+        </div>
+        <div class="items">
+            <img src="../练习/img/c2-4.webp">
+        </div>
+
+    </div>
+</body>
+
+</html>
