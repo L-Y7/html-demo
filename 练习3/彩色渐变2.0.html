@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            border: 1px solid #000;
+            width: 200px;
+            height: 80px;
+            margin: 80px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 80px;
+            color: aliceblue;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+
+
+        .box::before {
+            position: absolute;
+            content: ' ';
+            width: 500px;
+            height: 500px;
+            background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+            animation: rotate .75s linear infinite;
+            z-index: -1;
+        }
+
+        .box::after {
+            position: absolute;
+            content: ' ';
+            border-radius: 5px;
+            background-color: #000;
+            inset: 3px;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span>渐变效果</span>
+    </div>
+</body>
+
+</html>

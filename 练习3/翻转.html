@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+            border: 2px solid red;
+            position: absolute;
+            perspective: 300px;
+
+        }
+
+        .box1,
+        .box2 {
+            position: absolute;
+            height: 300px;
+            width: 600px;
+            text-align: center;
+            line-height: 300px;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+
+        }
+
+        .box1 {
+            background-color: antiquewhite;
+            z-index: 1;
+        }
+
+        .box2 {
+            background-color: aqua;
+            transform: rotateY(-180deg);
+
+        }
+
+        .box:hover .box1 {
+            transform: rotateY(180deg);
+        }
+
+        .box:hover .box2 {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">正面</div>
+        <div class="box2">背面</div>
+    </div>
+</body>
+
+</html>

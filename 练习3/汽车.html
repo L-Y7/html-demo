@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            height: 500px;
+            width: 1200px;
+            border: 2px solid red;
+            margin: 0 auto;
+        }
+
+        .car {
+            position: absolute;
+            width: 400px;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 0;
+            transition: all 3s;
+        }
+
+        .car .carimg {
+            width: 100%;
+        }
+
+        .car .ltl,
+        .car .lty {
+            position: absolute;
+            top: 75px;
+            right: 76px;
+            width: 53px;
+            transition: all 1s;
+        }
+
+        .car .ltl {
+            position: absolute;
+            top: 75px;
+            right: 289px;
+            width: 53px;
+        }
+
+        .box:hover .car {
+            transform: translate(-800px, -50%);
+        }
+
+        .box:hover .ltl,
+        .box:hover .lty {
+            transform: rotate(-360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="car">
+            <img src="./img/car.webp" class="carimg">
+            <img src="./img/wj(1).png" class="ltl">
+            <img src="./img/wj(1).png" class="lty">
+        </div>
+    </div>
+</body>
+
+</html>

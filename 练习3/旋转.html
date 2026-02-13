@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            position: relative;
+        }
+
+        .card div {
+            top:0;
+            left: 0;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform-origin: top left;
+        }
+
+        .front {
+            background: rgb(157, 19, 19, 0.4);
+            z-index: 2;
+        }
+
+        .back {
+            background-color: blue;
+            transform: skewY(15deg);
+        }
+
+        .card:hover .back {
+            transform: skewY(25deg);
+        }
+        .card:hover .front{
+            width: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="front"></div>
+        <div class="back"></div>
+    </div>
+</body>
+
+</html>
