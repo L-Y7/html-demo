@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            width: 100px;
+            height: 30px;
+            background-color: aqua;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 100%;
+            color: #000;
+        }
+
+        ul li {
+            transform: translateX(-50px);
+            background-color: blueviolet;
+            color: aquamarine;
+            opacity: 0;
+            transition: all 0.5s;
+            transition-delay: calc(0.1s * var(--i));
+           
+        }
+
+        .nav:hover ul li {
+            transform: translateX(0);
+            opacity: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="box1">菜单</div>
+        <ul>
+            <li style="--i:0;">one</li>
+            <li style="--i:1;">one</li>
+            <li style="--i:2;">one</li>
+            <li style="--i:3;">one</li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

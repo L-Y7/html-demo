@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [22, 33, [44, 55]];
+        function p(arr) {
+            var result = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (Array.isArray(arr[i])) {
+                    result.push((arr[i]));
+                }
+                else{
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+        console.log(p(arr));
+
+    </script>
+</body>
+
+</html>

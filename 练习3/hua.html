@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --width: 100px;
+        }
+
+        nav {
+            width: calc(var(--width) * 5);
+            position: relative;
+            height: 40px;
+            font-size: 0;
+        }
+
+        a {
+            height: 40px;
+            position: relative;
+            width: var(--width);
+            display: inline-block;
+            color: #000;
+            z-index: 1;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .box {
+            position: absolute;
+            background-color: aqua;
+            width: var(--width);
+            height: 40px;
+            top: 0;
+            left: 0;
+            transition: all 0.5s;
+        }
+
+
+        nav a:nth-child(1):hover~.box {
+            left: calc(0 * var(--width));
+        }
+
+        nav a:nth-child(2):hover~.box {
+            left: calc(1 * var(--width));
+        }
+
+        nav a:nth-child(3):hover~.box {
+            left: calc(2 * var(--width));
+        }
+
+        nav a:nth-child(4):hover~.box {
+            left: calc(3 * var(--width));
+        }
+
+        nav a:nth-child(5):hover~.box {
+            left: calc(4 * var(--width));
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">one</a>
+        <a href="#">one</a>
+        <a href="#">one</a>
+        <a href="#">one</a>
+        <a href="#">one</a>
+        <div class="box"></div>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1</p>
+    <p>111</p>
+    <div></div>
+    hhh
+    <p>111</p>
+    <script>
+        function l(node) {
+            var n = node;
+            while (n.previousSibling != null) {
+                if (n.previousSibling.nodeType == 1) {
+                    return n.previousSibling;
+                }
+                n = n.previousSibling;
+
+            }
+        }
+        var a= document.querySelectorAll("p")[2];
+
+        console.log(l(a));
+    </script>
+</body>
+
+</html>

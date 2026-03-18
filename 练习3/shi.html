@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        var num = Number(prompt('请输入一个数字'));
+        if (num >= 100 && num <= 999 && !isNaN(num)) {
+            var n = num.toString();
+            var a = Number(n.charAt(0));
+            var b = Number(n.charAt(1));
+            var c = Number(n.charAt(2));
+            if (Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3) == num) {
+                alert('yes');
+            }
+            else {
+                alert('no')
+            }
+        }
+        else {
+            alert('请输入正确的数')
+        }
+    </script>
+</body>
+
+</html>

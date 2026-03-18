@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border-color: white;
+            border-radius: 50%;
+            height: 99px;
+            width: 99px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 300px 300px;
+        }
+
+        .a {
+            position: absolute;
+            color: black;
+            background-color: aqua;
+            top: 0;
+            left: 0;
+            z-index: 12;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 1s;
+        }
+
+        .box:hover span {
+            transform: rotate(calc(360deg/8 * var(--i))) translateX(80px);
+        }
+        
+        .box:hover{
+            transform: rotate(calc(360deg/8 * var(--i))) translateX(80px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="a">中心</div>
+        <span style="--i:1;">1</span>
+        <span style="--i:2;">2</span>
+        <span style="--i:3;">1</span>
+        <span style="--i:4;">2</span>
+        <span style="--i:5;">1</span>
+        <span style="--i:6;">2</span>
+        <span style="--i:7;">1</span>
+        <span style="--i:8;">2</span>
+    </div>
+</body>
+
+</html>

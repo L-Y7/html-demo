@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: black;
+            font-size: 100px;
+            position: relative;
+        }
+
+        h1::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: 'HelloWorld';
+            background: linear-gradient(115deg, #fad648, #4fcf70, #12bcfe, red, orange, purple);
+            background-clip: text;
+            color: transparent;
+            clip-path: circle(100px at 100% 50%);
+            animation: move 2s linear infinite;
+        }
+
+        @keyframes move{
+            0% {
+                clip-path: circle(100px at 0% 50%);
+            }
+
+            50% {
+                clip-path: circle(100px at 100% 50%);
+            }
+
+            100% {
+                clip-path: circle(100px at 0% 50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HelloWorld</h1>
+</body>
+
+</html>

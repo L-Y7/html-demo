@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+
+        div {
+            position: relative;
+            margin: 100px auto;
+            width: 600px;
+        }
+
+        .a {
+            animation: rotate 3s linear infinite;
+            position: absolute;
+            width: 100%;
+            transform: scale(1.1);
+
+        }
+
+        .b {
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform:scale(1.1) rotate(0deg);
+            }
+
+            100% {
+                transform:scale(1.1) rotate(1turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./img/rotate.png" class="a">
+        <img src="./img/bgimg.png" class="b">
+    </div>
+</body>
+
+</html>
