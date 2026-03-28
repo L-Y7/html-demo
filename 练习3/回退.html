@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            width: 2548px;
+            transition: all 1s linear;
+            position: relative;
+            left: 0;
+
+        }
+
+        li {
+            border: 2px solid red;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .box {
+            position: relative;
+            width: 364px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 200px;
+        }
+
+
+
+        #left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: rgb(240, 142, 12);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        #right {
+            position: absolute;
+            left: 344px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgb(240, 142, 12);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul id="list">
+            <li><img src="./img/ad1.jpg"></li>
+            <li><img src="./img/ad2.jpg"></li>
+            <li><img src="./img/ad3.jpg"></li>
+            <li><img src="./img/ad4.jpg"></li>
+            <li><img src="./img/ad5.jpg"></li>
+            <li><img src="./img/ad6.jpg"></li>
+            <li><img src="./img/ad1.jpg"></li>
+        </ul>
+        <button id="left"></button>
+        <button id="right"></button>
+    </div>
+    <script>
+        var a = 1;
+        var b = document.getElementById('left');
+        var c = document.getElementById('right');
+        var olist = document.getElementById('list');
+        function nextImg() {
+
+            if (a <= 6) {
+                olist.style.left = -a * 364 + 'px';
+                a++;
+            }
+            if (a == 7) {
+                setTimeout(function () {
+                    olist.style.transition = 'none';
+                    olist.style.left = '0px';
+                    a = 1;
+                    olist.offsetWidth;
+                    olist.style.transition = 'all 1s linear';
+                }, 1000);
+            }
+        }
+
+        c.onclick = nextImg;
+
+        // var timer;
+        // // 开始动画为啥不直接把整个放进去
+        // function startAnimation() {
+        //     timer = setInterval(function () {
+        //         nextImg()
+        //     }, 3000);
+
+        // }
+        // olist.onmouseenter = function () {
+        //     clearInterval(timer);
+        //     timer = setInterval(nextImg, 3000);
+        // };
+        // olist.onmouseleave = function () {
+        //     clearInterval(timer);
+        // };
+
+    </script>
+</body>
+
+</html>

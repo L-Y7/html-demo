@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Promise 测试</title>
+    </head>
+
+    <body>
+        <script>
+            new Promise((resolve, reject) => {
+                reject('初始错误'); // 立即触发 reject
+            })
+                .catch(err => {
+                    console.log('第一次失败:', err); // 输出: 第一次失败: 初始错误
+                    throw new Error('链式错误'); // 将错误传递到下一个 catch
+                })
+                .then(data => {
+                    console.log('成功:', data); // 不会执行，因为上一个 catch 抛出了错误
+                })
+                .catch(err => {
+                    console.log('第二次失败:', err); // 输出: 第二次失败: Error: 链式错误
+                });
+        </script>
+    </body>
+
+    </html>
+    </script>
+</body>
+
+</html>

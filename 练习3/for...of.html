@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            0: 'red',
+            1: 2,
+            length: 2
+        };
+        obj[Symbol.iterator] = () => {
+            let index = 0;
+            return {
+                next() {
+                    let value;
+                    let done;
+                    if (index < obj.length) {
+                        value = obj[index];
+                        done = false;
+                    }
+                    else {
+                        value = undefined;
+                        done = true;
+                    }
+                    index++;
+                    return {
+                        value,
+                        done
+                    }
+                }
+            }
+        }
+        for (const item of obj) {
+            console.log(item);
+        }
+    </script>
+</body>
+
+</html>

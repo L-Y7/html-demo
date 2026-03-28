@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        只输入大写字母
+        <input type="text" id="word">
+    </p>
+    <script>
+        var ow = document.getElementById('word');
+        ow.onkeypress = function (e) {
+            if (e.charCode >= 97 && e.charCode <= 122 || e.charCode <= 57 && e.charCode >= 48) {
+                e.preventDefault();
+
+            }
+        }
+    </script>
+</body>
+
+</html>

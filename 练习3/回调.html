@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script>
+        const a = document.getElementById('box')
+        const move = (el, { x = 0, y = 0 }, end) => {
+
+            el.style.transition = "all 0.5s"
+            el.style.transform = `translate(${x}px,${y}px)`
+
+            setTimeout(() => {
+                end && end()
+            }, 500)
+
+        }
+        const moveed = (el, point) => {
+            return new Promise(resolve => {
+
+                move(el, point, () => {
+
+                    resolve();   // 动画结束时触发
+
+                })
+
+            })
+        };
+        a.addEventListener('click',
+            () => {
+                moveed(a, { x: 10, y: 20 })
+                    .then(() => moveed(a, { x: 0, y: 50 }))
+                    .then(() => moveed(a, { x: 100, y: 50 }))
+            }
+        )
+        // //.then() 里面必须传 函数
+
+        // 而不是：
+
+        // 函数执行结果
+
+        // 所以必须写
+    </script>
+</body>
+
+</html>

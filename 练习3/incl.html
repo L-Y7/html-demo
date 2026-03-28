@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let url = 'https://www.imooc.com/course/list';
+        const add = (url, name, value) => {
+            url += url.includes('?') ? '&' : '?';
+           url += `${name}=${value}`;
+            return url;
+        }
+        url = add(url, 'c', 'fe');
+        console.log(url);
+    </script>
+</body>
+
+</html>
